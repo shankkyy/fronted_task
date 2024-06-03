@@ -4,6 +4,7 @@ import { Autocomplete, TextField, CircularProgress, Box, Typography } from '@mui
 import debounce from 'lodash.debounce';
 
 const CollegeAutocomplete = () => {
+    //setting up all the values using hook
   const [colleges, setColleges] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedCollege, setSelectedCollege] = useState(null);
@@ -22,7 +23,7 @@ const CollegeAutocomplete = () => {
       setLoading(false);
     }
   };
-
+//to implement debounce 
   const debouncedFetchColleges = useMemo(
     () => debounce((searchTerm) => fetchColleges(searchTerm), 300),
     []
@@ -36,6 +37,7 @@ const CollegeAutocomplete = () => {
     }
   }, [inputValue, debouncedFetchColleges]);
 
+//fetch logo of the selected college
   const fetchLogo = async (domain) => {
     const logoEndpoint = `https://logo.clearbit.com/${domain}`;
     try {
@@ -48,7 +50,7 @@ const CollegeAutocomplete = () => {
       setLogoError(true);
     }
   };
-
+//when we change the college
   const handleCollegeChange = (event, value) => {
     setSelectedCollege(value);
     if (value) {
