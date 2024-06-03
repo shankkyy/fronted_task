@@ -1,3 +1,9 @@
+
+### `HOW TO USE `
+In this project we have to click inside the box and search for a college and then the list of colleges similiar to the initial character of the input will give the list of colleges and then after you click on the college name the college name will display and the logo of college. you can use this link to access the working of the project :
+https://fronted-task.vercel.app/ 
+implemented debouncing reduces the number of API calls by only fetching data after the user has stopped typing for a short period.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
